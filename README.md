@@ -14,8 +14,11 @@ Firstly, correctly predicting the market value for the property as recommended l
 
 ## Data Understanding
 To train a predictive model, I first need to scrape data about the second-hand housing with detailed and comprehensive description. As state earlier, WUBA is the ideal data source for its completeness and strong real-time. To ensure data integrity and reliability, I chose to crawl data ourselves from the website, which contains 17 datasets, rather than use ready-made third-party datasets. Through this means, I ensured that the data used for data mining is completely public, true and real-time.
+
 The following is the summary of extracted features:
+
 Total price: target variable.
+
 Green space ratio: indicating the luxury degree of the community. High green space is a expression of luxury apartment, and hence the higher the total price.
 Usable area: having the strongest correlation to total price. Given same price per square meter, Greater usable area comes with higher total price.
 Duration of property right: unlike America, China"s property has limited duration, mostly of which are 70 years. In our sample, there are 3 categories, 70 years, 50 years and 40 years.
