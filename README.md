@@ -52,3 +52,23 @@ Due to cultural influence, orientation has decisive position in judging a house.
 
 ### Data Limitation & Selection Bias
 From the perspective of data presentation, the textual description take up most features and numeric features are relatively less. Unavoidably, we may lose some details when converting the text into categorical data. Besides, in order to solve the business problem, predicting the price of new housing unit that reflects the whole market, we have a prior assumption of the dataset: the prices of housing units in the data source are results of invisible hands of market. Since if a large number of points are over-priced or lower-priced, the model cannot really reflect the market. As for selection bias, even though WUBA is the best accessible data source, it cannot include every instance of house reselling. For instance, property owners of extremely luxury buildings seldom post their advertisements on public service platform due to personal information issue. To some extent, scraping data from a specific website must come with data selection bias for it screens out the portion composed by website users.
+
+### Evaluation metrics
+Average model test set R2 Score:0.9657954232042204
+Average model test set RMSE Score:0.1250091886145994
+
+### Deployment
+
+#### Model Deploy 
+After laboratory test, we have confidence that the model can predict the price for the properties true to its market value at the level of 96.57%. Before the real-estate agency to fully deploy the model onto the system both online and offline for pricing policy, we suggest the model to be tested on the offline system (corporate inner system) first. 
+Monitor and Evaluate The agents are suggested to use the predicted price as reference and keep records of the actual deal price and the time between listing and sell of the property as criteria to evaluate the model. The difference between the predicted price and time cost for selling the property will be studied as feedback to further improve and update the model. The goal is to predict price as close to the deal price as possible to shorten selling time thus lower the sales cost and increase the revenue for real-estate agencies.
+
+#### Further Advancement
+The model can be advanced by incorporating the time cost feature to predict a probability of selling the house at certain price within certain time limit (eg. c1 = within one week, c2 = within one month, etc) for specific property. The agency can thus calculate the profitability of representing the property by multiplying related cost. If the expected listing price for the owner is higher than the suggested profitable price range, the agency should drop certain property.
+
+#### Possible Concern 
+Since some feature of the model such as the "month-to-month growth rate"  and "green space ratio" that are not easy accessible for agents, the model should be able to take community name as input keys to search for related data in the system histories when deploying the model in an actual production system. The agency should also be aware that the performance of the model may be unsatisfactory if there is prominent change to the market such as new restriction or tax policies. It might be necessary to introduce new features to the model.
+
+#### Ethical Discussion 
+The primary purpose for the model is to simplify the pricing mechanism of the second-hand housing market in Shanghai for the benefit of all parties involved. We aim to construct a model that can predict the true value of the property, yet the way of model training and updating might cost the predicted price to reflect too much from the market environment. This could cause the use of model to worsen the price pushing caused by speculators under frenzied situation. More domain knowledge should be applied here to discuss on how the model can differentiate between these situations.
+
