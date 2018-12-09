@@ -1,5 +1,5 @@
 # Shanghai-Home-Price-Prediction-Model
-Construct a stacked model based on ExtraTree, LightGBM, and MLP to estimate price the second-hand house unit in Shanghai based on the current listings in the market.
+Constructed a stacked model based on ExtraTree, LightGBM, and MLP to estimate price the second-hand house unit in Shanghai based on the current listings in the market.
 
 ### BACKGROUND
 Last year, to inhibit uncontrollable housing price inflation and to stabilize the volatile housing market, Chinese government formulated and promulgated a series of policies to pause the vicious circle induced by real estate speculators. However, policy can only influence the market but cannot predict market trends, especially this market of house purchasing with such high income elasticity. Not to mention that the operation mode of China"s house market has its lethal problem in the long term; this industry is always threatened by unprofessional management of related organization and cutthroat competition from peers. For a long period of time, the public confidence in the real estate industry has sagged due to its market confusion and unclear pricing norms, which is more like a game for capitalists rather than a market competition between suppliers and demanders.
